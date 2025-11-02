@@ -39,6 +39,27 @@
             bindings = <&none &kp K &kp O &kp U &kp S &kp A &kp K &kp U &kp C &kp O &kp J &kp P &kp LBKT &kp Y &kp A &kp H &kp O &kp O &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
             label = "KOUSAKUCOJP";
         };
+
+        battery_status: battery_status {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp A &kp T &kp T &kp E &kp R &kp Y &kp COLON &kp SPACE>;
+            label = "BATTERY_STATUS";
+        };
+
+        mouse_speed_info: mouse_speed_info {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp O &kp U &kp S &kp E &kp SPACE &kp S &kp P &kp E &kp E &kp D &kp COLON &kp SPACE &kp N1 &kp X>;
+            label = "MOUSE_SPEED";
+        };
+
+        scroll_speed_info: scroll_speed_info {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp C &kp R &kp O &kp L &kp L &kp SPACE &kp S &kp P &kp E &kp E &kp D &kp COLON &kp SPACE &kp N1 &kp X>;
+            label = "SCROLL_SPEED";
+        };
     };
 
     combos {
@@ -75,11 +96,11 @@
 
         function {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &kp PIPE
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &kp UNDERSCORE
+&trans          &trans             &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&kp F1          &kp F2             &kp F3  &kp F4  &kp F5  &kp F6                  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&battery_status &mouse_speed_info  &scroll_speed_info  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
+&trans          &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &kp PIPE
+&trans          &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &kp UNDERSCORE
             >;
         };
 
