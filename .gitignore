@@ -1,0 +1,17 @@
+# Claude Code framework
+.claude/
+
+# Build artifacts
+build/
+.build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
