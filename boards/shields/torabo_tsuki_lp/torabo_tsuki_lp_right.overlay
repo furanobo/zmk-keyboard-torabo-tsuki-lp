@@ -2,8 +2,25 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/ {
+    auto_mouse_layer: auto_mouse_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <250>;
+        excluded-positions = <51 52 53 61 68>;
+    };
+};
+
 &trackball_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &auto_mouse_layer 4 2000
+    >;
+
+    scroll_mode {
+        layers = <5>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
 };
 
 &size_s_transform {
