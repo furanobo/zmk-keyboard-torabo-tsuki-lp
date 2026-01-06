@@ -62,6 +62,7 @@
             bindings = <&none &kp K &kp O &kp U &kp S &kp A &kp K &kp U &kp C &kp O &kp J &kp P &kp LBKT &kp Y &kp A &kp H &kp O &kp O &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
             label = "KOUSAKUCOJP";
         };
+
     };
 
     combos {
@@ -88,11 +89,11 @@
 
         numpad {
             bindings = <
-&trans  &trans                   &trans          &trans                    &trans           &trans                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LEFT_WIN LEFT_ARROW  &kp UP_ARROW    &mt LEFT_WIN RIGHT_ARROW  &kp LC(HOME)     &kp LC(END)                        &kp N7  &kp N8  &kp N9  &trans  &trans  &kp DEL
-&trans  &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW           &kp HOME         &kp END            &trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_CLR              &bt BT_CLR      &trans                    &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
-&bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_CLR_ALL            &kp PAGE_UP      &kp PAGE_DOWN      &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &trans
+&trans        &trans                   &trans          &trans                    &trans           &trans                             &trans  &trans  &trans  &tog 10   &tog 11   &trans
+&trans        &mt LEFT_WIN LEFT_ARROW  &kp UP_ARROW    &mt LEFT_WIN RIGHT_ARROW  &kp LC(HOME)     &kp LC(END)                        &kp N7  &kp N8  &kp N9  &tog 6    &tog 9    &kp DEL
+&trans        &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW           &kp HOME         &kp END            &trans  &trans  &kp N4  &kp N5  &kp N6  &tog 7    &tog 8    &trans
+&bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2    &bt BT_CLR                &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans    &trans    &trans
+&bt BT_PRV    &bt BT_NXT               &bt BT_CLR_ALL  &trans                    &kp PAGE_UP      &kp PAGE_DOWN      &trans  &trans  &trans  &trans  &trans  &trans    &kp N0    &trans
             >;
         };
 
@@ -127,6 +128,72 @@
         };
 
         scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* Speed Layer 6: Slowest (0.5x) - 最遅 */
+        speed_slowest {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* Speed Layer 7: Slow (0.75x) - 遅 */
+        speed_slow {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* Speed Layer 8: Fast (1.5x) - 速 */
+        speed_fast {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* Speed Layer 9: Fastest (2x) - 最速 */
+        speed_fastest {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* Timeout Layer 10: Quick (500ms) - マウス操作停止後すぐ戻る */
+        timeout_quick {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* Timeout Layer 11: Slow (5000ms) - マウス操作停止後ゆっくり戻る */
+        timeout_slow {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
