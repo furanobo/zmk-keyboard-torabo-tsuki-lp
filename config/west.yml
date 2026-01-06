@@ -21,7 +21,7 @@ manifest:
       revision: main
     - name: zmk-feature-cdc-acm-bootloader-trigger
       remote: sekigon-gonnoc
-      revision: main
+      revision: f79db1d
     - name: zmk-feature-non-lipo-battery-management
       remote: sekigon-gonnoc
       revision: main
