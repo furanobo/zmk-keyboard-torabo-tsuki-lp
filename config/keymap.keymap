@@ -9,19 +9,23 @@
 / {
     behaviors {
         // Shift押下時: | (パイプ), Shiftなし: ￥ (円記号)
+
         jp_pipe: jp_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_YEN>, <&kp LS(0x89)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "JP_PIPE";
         };
 
         // Shift押下時: _ (アンダースコア), Shiftなし: ￥ (円記号)
+
         jp_underscore: jp_underscore {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_YEN>, <&kp LS(0x87)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "JP_UNDERSCORE";
         };
@@ -79,21 +83,21 @@
 
         main {
             bindings = <
-&trans     &trans   &trans    &trans    &trans     &trans                            &trans         &trans  &trans     &trans   &trans             &trans
-&kp TAB    &kp Q    &kp W     &kp E     &kp R      &kp T                             &kp Y          &kp U   &kp I      &kp O    &kp P              &kp BSPC
-&kp JP_HANZEN  &kp A    &kp S     &kp D     &kp F      &kp G      &trans  &trans         &kp H          &kp J   &kp K      &kp L    &kp LEFT_BRACKET   &kp ENTER
-&kp LSHFT  &kp Z    &kp X     &kp C     &kp V      &kp B      &sl 1   &sl 2          &kp N          &kp M   &kp COMMA  &kp DOT  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp HOME   &kp END  &kp LGUI  &lt 1 LALT  &kp SPACE  &kp LCTRL  &sl 3   &kp SEMICOLON  &kp SINGLE_QUOTE  &trans  &trans     &trans   &kp SLASH          &kp RCTRL
+&trans         &trans   &trans    &trans      &trans     &trans                              &trans            &trans  &trans     &trans   &trans             &trans
+&kp TAB        &kp Q    &kp W     &kp E       &kp R      &kp T                               &kp Y             &kp U   &kp I      &kp O    &kp P              &kp BSPC
+&kp JP_HANZEN  &kp A    &kp S     &kp D       &kp F      &kp G      &trans  &trans           &kp H             &kp J   &kp K      &kp L    &kp LEFT_BRACKET   &kp ENTER
+&kp LSHFT      &kp Z    &kp X     &kp C       &kp V      &kp B      &sl 1   &sl 2            &kp N             &kp M   &kp COMMA  &kp DOT  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp HOME       &kp END  &kp LGUI  &lt 1 LALT  &kp SPACE  &kp LCTRL  &sl 3   &lt 2 SEMICOLON  &kp SINGLE_QUOTE  &trans  &trans     &trans   &kp SLASH          &kp RCTRL
             >;
         };
 
         numpad {
             bindings = <
-&trans        &trans                   &trans          &trans                    &trans           &trans                             &trans  &trans  &trans  &tog 10   &tog 11   &trans
-&trans        &mt LEFT_WIN LEFT_ARROW  &kp UP_ARROW    &mt LEFT_WIN RIGHT_ARROW  &kp LC(HOME)     &kp LC(END)                        &kp N7  &kp N8  &kp N9  &tog 6    &tog 9    &kp DEL
-&trans        &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW           &kp HOME         &kp END            &trans  &trans  &kp N4  &kp N5  &kp N6  &tog 7    &tog 8    &trans
-&bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2    &bt BT_CLR                &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans    &trans    &trans
-&bt BT_PRV    &bt BT_NXT               &bt BT_CLR_ALL  &trans                    &kp PAGE_UP      &kp PAGE_DOWN      &trans  &trans  &trans  &trans  &trans  &trans    &kp N0    &trans
+&trans        &trans                   &trans          &trans                    &trans           &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &mt LEFT_WIN LEFT_ARROW  &kp UP_ARROW    &mt LEFT_WIN RIGHT_ARROW  &kp LC(HOME)     &kp LC(END)                        &kp N7  &kp N8  &kp N9  &trans  &trans  &kp DEL
+&trans        &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW           &kp HOME         &kp END            &trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
+&bt BT_CLR    &bt BT_CLR               &bt BT_CLR      &trans                    &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2    &bt BT_CLR_ALL            &kp PAGE_UP      &kp PAGE_DOWN      &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &trans
             >;
         };
 
