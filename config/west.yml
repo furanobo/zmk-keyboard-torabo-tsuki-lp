@@ -11,6 +11,7 @@ manifest:
       import: app/west.yml
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
+      revision: 7ac6fca
       import: west.yml
     - name: zmk-feature-status-led
       remote: sekigon-gonnoc
