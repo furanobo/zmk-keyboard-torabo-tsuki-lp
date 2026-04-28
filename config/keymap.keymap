@@ -5,6 +5,17 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        em: exit_mouse {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_tap &to 0>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -30,11 +41,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&em ESC    &em N1     &em N2    &em N3    &em N4    &em N5                                                         &em N6      &em N7    &em N8     &em N9    &em N0    &em BSPC
+&em TAB    &em Q      &em W     &em E     &em R     &em T                                                          &em Y       &em U     &em I      &em O     &em P     &em BSPC
+&em CAPS   &em A      &em S     &em D     &em F     &em G        &mkp LCLK                  &mkp RCLK              &em H       &em J     &em K      &em L     &em SEMI  &em SQT
+&em LSHFT  &em Z      &em X     &em C     &em V     &em B        &em SPACE                  &em RET                &em N       &em M     &em COMMA  &em DOT   &em FSLH  &em RSHFT
+&em LCTRL  &em LCTRL  &em LGUI  &em LALT  &em BSPC  &em SPACE    &em LANGUAGE_1             &em LANGUAGE_2         &em ENTER   &em BSPC  &em RALT   &em RGUI  &em RCTRL &em RCTRL
             >;
         };
 
